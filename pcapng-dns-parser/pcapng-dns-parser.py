@@ -36,6 +36,8 @@ print msg
 
 a_pkt = 0
 t_pkt = 0
+ipv4_num = 0
+ipv6_num = 0
 ty = ""
 
 with open(str(argv[2]), "w") as fd:
@@ -60,13 +62,17 @@ with open(str(argv[2]), "w") as fd:
               fd.write(s1)
 
               for i in range(pkt[DNS].ancount):
-                  #rst = "Name: %s \t\t:: Data %s" %(pkt[DNS].an[i].rrname, pkt[DNS].an[i].rdata)
-                  #print rst
+                pkt_a = pkt[DNS].an[i]
 
-                  s2 = ",%s,%s\n" %(pkt[DNS].an[i].rrname, pkt[DNS].an[i].rdata)
-                  fd.write(s2)
+                r_type = pkt_a.type
+                if r_type == 1:
+                 ipv4_num += 1
+                elif r_type == 28:
+                 ipv6_num += 1
 
-              #print("---------------------------------------------------")
+                s2 = ",%s,%s\n" %(pkt_a.rrname, pkt_a.rdata)
+                fd.write(s2)
+
               if t_pkt%50 == 0:
                   print('.'),
                   stdout.flush()
@@ -78,5 +84,11 @@ print tpktstr
 
 spktstr = "DNS valid answers total: %i" %(a_pkt)
 print spktstr
+
+ipv4str = "IPv4 addresses found total: %i" %(ipv4_num)
+print ipv4str
+
+ipv6str = "IPv6 addresses found total: %i" %(ipv6_num)
+print ipv6str
 
 print ".csv file is ready!\n###################"
