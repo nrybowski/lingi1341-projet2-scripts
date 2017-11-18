@@ -1,6 +1,6 @@
 # pcapng-dns-parser
 Il s'agit d'un petit script python pouvant parser un fichier .pcap/.pcapng, en extraire les réponses DNS et les formater dans un fichier .csv afin de pouvoir facilement les visualiser.
-Il est basé sur le package python [scapy](http://scapy.readthedocs.io/en/latest/usage.html).
+Il est basé sur le package python [scapy](http://scapy.readthedocs.io/en/latest/introduction.html).
 
 ## Requirements
 Afin de pouvoir rapidement mettre ce script en oeuvre, un fichier `requirements.txt` est fourni. Il est possible d'utiliser l'utilitaire `pip` de python de la manière suivante:
