@@ -39,7 +39,7 @@ t_pkt = 0
 ty = ""
 
 with open(str(argv[2]), "w") as fd:
-    with PcapReader('s1_c1.pcapng') as pcap_reader:
+    with PcapReader(input_file) as pcap_reader:
       for pkt in pcap_reader:
           t_pkt += 1
 
