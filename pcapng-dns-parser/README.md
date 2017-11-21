@@ -1,13 +1,13 @@
 # pcapng-dns-parser
-Il s'agit d'un petit script python pouvant parser un fichier .pcap/.pcapng, en extraire les réponses DNS et les formater dans un fichier .csv afin de pouvoir facilement les visualiser.
-Il est basé sur le package python [scapy](http://scapy.readthedocs.io/en/latest/introduction.html).
+Il s'agit d'un petit script python2 pouvant parser un fichier .pcap/.pcapng, en extraire les réponses DNS et les formater dans un fichier .csv afin de pouvoir facilement les visualiser.
+Il est basé sur le package python2 [scapy](http://scapy.readthedocs.io/en/latest/introduction.html).
 
 ## Requirements
 Afin de pouvoir rapidement mettre ce script en oeuvre, un fichier `requirements.txt` est fourni. Il est possible d'utiliser l'utilitaire `pip` de python de la manière suivante:
 ```python
 pip install -r requirements.txt
 ```
-> NB: Il est vivement conseillé, mais pas obligatoire, d'utiliser `virtualenv` lors de l'installation des dépendances.
+> NB: Il est vivement conseillé, mais pas obligatoire, d'utiliser `virtualenv` lors de l'installation des dépendances. Si vous n'utilisez pas virtualenv, il se peut que vous deviez supprimer la première ligne du fichier requirements.txt afin que l'installation des packages fonctionne.
 
 >[virtualenv](https://virtualenv.pypa.io/en/stable/) est un utilitaire de python permettant de créer des environnements virtuels. Cela permet d'avoir une configuration spécifique à chaque projet python sans "polluer" l'installation principale de python avec des packages supplémentaires. Voici une petite explication sur la création d'un nouvel environnement virtuel sous Linux:
 
