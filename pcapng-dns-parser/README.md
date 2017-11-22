@@ -7,7 +7,7 @@ Afin de pouvoir rapidement mettre ce script en oeuvre, un fichier `requirements.
 ```python
 pip install -r requirements.txt
 ```
-> NB: Il est vivement conseillé, mais pas obligatoire, d'utiliser `virtualenv` lors de l'installation des dépendances. Si vous n'utilisez pas virtualenv, il se peut que vous deviez supprimer la première ligne du fichier requirements.txt afin que l'installation des packages fonctionne.
+> NB: Il est vivement conseillé, mais pas obligatoire, d'utiliser `virtualenv` lors de l'installation des dépendances.
 
 >[virtualenv](https://virtualenv.pypa.io/en/stable/) est un utilitaire de python permettant de créer des environnements virtuels. Cela permet d'avoir une configuration spécifique à chaque projet python sans "polluer" l'installation principale de python avec des packages supplémentaires. Voici une petite explication sur la création d'un nouvel environnement virtuel sous Linux:
 
